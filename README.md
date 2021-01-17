@@ -1,2 +1,2 @@
 # SimpleGame2021
- Simple collection game to test targeting the web platform.
+A very basic collection game to use as a test for buidling for the webGL platform.
