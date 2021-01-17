@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         time = maxTime;
+        hasWon = false;
     }
 
     private void Update()
