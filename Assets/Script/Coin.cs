@@ -24,7 +24,8 @@ public class Coin : MonoBehaviour
 
         if(Coin.CoinCount <= 0)
         {
-            // Win!
+            Timer.Stop();
+            Fireworks.Play();
         }
     }
 

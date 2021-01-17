@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private float time = 0;
 
+    private static bool hasWon = false;
+
     private void Start()
     {
         time = maxTime;
@@ -17,12 +19,20 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        time -= Time.deltaTime;
+        if(!hasWon)
+        {
+            time -= Time.deltaTime;
+        }
 
         if(time <= 0)
         {
             Coin.CoinCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public static void Stop()
+    {
+        hasWon = true;
     }
 }
